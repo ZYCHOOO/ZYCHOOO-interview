@@ -40,6 +40,7 @@ const handleDelete = (id) => {
       margin-left: auto;
     }
     &-del {
+      margin-left: auto;
       color: #4685ff;
       cursor: pointer;
     }
