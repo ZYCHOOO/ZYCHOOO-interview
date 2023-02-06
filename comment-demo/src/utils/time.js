@@ -2,7 +2,7 @@ export function timestampFormat (timestamp) {
   function zerolize (num) {
     return num > 0 && num < 9 ? `0${num}` : num
   }
-  timestamp = timestamp / 1000
+  timestamp = parseInt(new Date(timestamp).getTime() / 1000)
   // 当前时间戳
   const currentTimestamp = parseInt(new Date().getTime() / 1000)
   // 参数与当前时间戳相差秒数
