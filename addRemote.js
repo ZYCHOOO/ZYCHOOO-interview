@@ -8,7 +8,7 @@ const addRemote = async (a, b) => new Promise(resolve => {
 async function add (...args) {
   let total = 0
   for (let i = 0; i < args.length; i++) {
-    result += await addRemote(total, args[i])
+    total = await addRemote(total, args[i])
   }
   return total
 }
