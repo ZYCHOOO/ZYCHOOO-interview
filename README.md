@@ -9,6 +9,27 @@
 #### 230206 面试记录
 
 1.  假如本地机器无法做加减乘除，需用请求服务端来实现
+
+    ```javascript
+    // 以加法为例，现有远程API的模拟实现 addRemote
+    const addRemote = async (a, b) =>
+      new Promise((resolve) => {
+        setTimeout(() => resolve(a + b), 1000);
+      });
+
+    // 请实现本地的add方法，调用addRemote，能够最优的实现输入数字的加法。
+    async function add(...args) {}
+
+    // 请用示例验证运行结果:
+    add(1, 2).then((result) => {
+      console.log(result); // 3
+    });
+
+    add(3, 5, 2).then((result) => {
+      console.log(result); // 10
+    });
+    ```
+
 2.  根据图片实现一个评论的 demo
     ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63af2ace04ae4233a252296b3bb00b18~tplv-k3u1fbpfcp-watermark.image?)
 
